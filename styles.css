@@ -1,0 +1,20 @@
+/* styles.css for custom feedback system styling */
+
+/* Example: Add a subtle shadow to feedback cards */
+.feedback-card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Example: Custom color for welcome message */
+#welcomeMsg {
+    color: #059669;
+    font-weight: 600;
+}
+
+/* Example: Custom style for clear button */
+#clearBtn {
+    transition: background 0.2s;
+}
+#clearBtn:hover {
+    background: #dc2626;
+}

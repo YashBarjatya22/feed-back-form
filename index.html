@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Collection System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Guest Lecture Feedback</h1>
+        <form id="feedbackForm" class="space-y-4">
+            <div>
+                <label class="block font-semibold">Full Name</label>
+                <input type="text" id="name" class="w-full border rounded px-3 py-2" required>
+            </div>
+            <div>
+                <label class="block font-semibold">Email</label>
+                <input type="email" id="email" class="w-full border rounded px-3 py-2" required>
+            </div>
+            <div>
+                <label class="block font-semibold">Department</label>
+                <select id="department" class="w-full border rounded px-3 py-2" required>
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="CIVIL">CIVIL</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-semibold">Session Rating</label>
+                <div id="ratingGroup" class="flex space-x-4">
+                    <label><input type="radio" name="rating" value="1" required> 1</label>
+                    <label><input type="radio" name="rating" value="2"> 2</label>
+                    <label><input type="radio" name="rating" value="3"> 3</label>
+                    <label><input type="radio" name="rating" value="4"> 4</label>
+                    <label><input type="radio" name="rating" value="5"> 5</label>
+                </div>
+            </div>
+            <div>
+                <label class="block font-semibold">Comments</label>
+                <textarea id="comments" class="w-full border rounded px-3 py-2" maxlength="250" rows="3"></textarea>
+                <div class="text-sm text-gray-500"><span id="charCount">0</span>/250 characters</div>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+        </form>
+        <button id="clearBtn" class="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Clear All Feedbacks</button>
+        <div id="welcomeMsg" class="mt-4 text-green-600 font-semibold"></div>
+    </div>
+    <div class="max-w-2xl mx-auto mt-8" id="feedbackList"></div>
+    <script src="script.js"></script>
+</body>
+</html>
